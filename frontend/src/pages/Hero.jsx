@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "../components/FirstPage/Navbar";
+import Title from "../components/FirstPage/Title";
 
 const Hero = () => {
   return (
@@ -11,6 +13,8 @@ const Hero = () => {
           #020013
         `,
       }}>
+        <Navbar />
+        <Title />
     </div>
   );
 };
