@@ -16,13 +16,13 @@ const BottomCircle = () => {
       ease: "power4.inOut",
     });
   };
-return (
-  <div
-    ref={circleRef}
-    onClick={expandCircle}
-    className="cursor:pointer absolute h-130 w-130 rounded-full bg-[#111111] left-1/2 -translate-x-1/2 top-[42vw]"
-  ></div>
-);
+  return (
+    <div
+      ref={circleRef}
+      onClick={expandCircle}
+      className="cursor-pointer hover:scale-102 absolute h-130 w-130 rounded-full bg-[#111111] left-1/2 -translate-x-1/2 top-[42vw]"
+    ></div>
+  );
 };
 
 export default BottomCircle;
