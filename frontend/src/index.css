@@ -7,6 +7,10 @@
   font-family: nycd;
   src: url(/nycd.ttf);
 }
+@font-face {
+  font-family: poppins;
+  src: url(/poppins.ttf);
+}
 body{
   background: #F9F2E0;
 }
