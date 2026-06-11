@@ -1,0 +1,6 @@
+site color : gradient + dark shade 
+1.  LANDING PAGE(Navbar-top, title)
+    navbar ( home, about me( about section {redirect}), product (analysis cv {redirect},github (logo + redirect to repo)))
+
+
+2.  FORM(Recruiter's Name, Job Description, Experience, Upload resume)
