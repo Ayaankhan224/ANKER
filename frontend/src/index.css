@@ -3,6 +3,10 @@
   font-family: oran;
   src: url(/oran.ttf);
 }
+@font-face {
+  font-family: nycd;
+  src: url(/nycd.ttf);
+}
 body{
   background: #F9F2E0;
 }
