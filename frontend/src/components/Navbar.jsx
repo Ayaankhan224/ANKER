@@ -23,7 +23,7 @@ const Navbar = () => {
         <h3 className="text-white font-[poppins] bg-[#E56E3A] py-2 px-5 rounded-full tracking-wider cursor-pointer hover:scale-110 duration-100 ease-in">SOURCE</h3>
       </div>
 
-      <div className={`h-screen w-2/5 fixed right-0 top-0 bg-black transition-transform duration-200 ease-in ${
+      <div className={`h-screen w-2/5 fixed right-0 top-0 bg-black transition-transform duration-300 ease-in ${
       open ? "translate-x-0" : "translate-x-full"
       }`}>
         <button onClick={()=>{setOpen(false)}} className='bg-[#fff]'>hellloooo</button>
