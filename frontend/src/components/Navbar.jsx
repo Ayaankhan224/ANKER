@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IconContext } from "react-icons";
-import _CustomBounce from "gsap/CustomBounce";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -23,10 +23,20 @@ const Navbar = () => {
         <h3 className="text-white font-[poppins] bg-[#E56E3A] py-2 px-5 rounded-full tracking-wider cursor-pointer hover:scale-110 duration-100 ease-in">SOURCE</h3>
       </div>
 
-      <div className={`h-screen w-2/5 fixed right-0 top-0 bg-black transition-transform duration-300 ease-in ${
+      <div className={`h-screen w-2/5 fixed right-0 top-0 backdrop-blur-2xl bg-[#0000006a] transition-transform duration-300 ease-in ${
       open ? "translate-x-0" : "translate-x-full"
       }`}>
-        <button onClick={()=>{setOpen(false)}} className='bg-[#fff]'>hellloooo</button>
+        <IconContext.Provider value={{ color:"white", size: "2.5em" }}>
+          <div onClick={()=>{setOpen(false)}} className="bg-transparent rounded-full p-2 cursor-pointer fixed right-0 p-10">
+            <RxCross2 />
+          </div>
+        </IconContext.Provider>
+        <div className="text-white font-[poppins] h-full w-full pl-15 flex flex-col justify-center gap-24 text-4xl shadow-[-20px_0_40px_rgba(0,0,0,0.4)]">
+          <h2 className="cursor-pointer">ABOUT</h2>
+          <h2 className="cursor-pointer">HOW IT WORKS</h2>
+          <h2 className="cursor-pointer">FEEDBACK</h2>
+          <h2 className="cursor-pointer">CONTACT</h2>
+        </div>
       </div>
     </div>
   );
