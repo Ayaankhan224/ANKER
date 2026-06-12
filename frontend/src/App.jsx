@@ -10,7 +10,7 @@ const App = () => {
       <Loading once='true'>
         <Routes>
           <Route path='/' element={<Hero />}/>
-          <Route path='/get-started' element={<Form />}/>
+          <Route path='/form' element={<Form />}/>
         </Routes>
       </Loading>
     </div>

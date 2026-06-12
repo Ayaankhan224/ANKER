@@ -25,7 +25,7 @@ const HeroBottom = () => {
   return (
     <div className="flex-1 font-[poppins] flex justify-between items-end">
       <h6>RESUMES IN</h6>
-      <Link to="/get-started">
+      <Link to="/form">
         <button
           onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
