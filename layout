@@ -1,6 +1,10 @@
-site color : gradient + dark shade 
+accent > #E56E3A 
+
+
 1.  LANDING PAGE(Navbar-top, title)
-    navbar ( home, about me( about section {redirect}), product (analysis cv {redirect},github (logo + redirect to repo)))
+        NAVBAR ( home, about, contact)
 
 
 2.  FORM(Recruiter's Name, Job Description, Experience, Upload resume)
+
+3.  FOOTER
