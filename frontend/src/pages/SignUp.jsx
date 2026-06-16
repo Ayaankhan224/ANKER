@@ -26,8 +26,8 @@ const SignUp = () => {
               type="text"
               placeholder="Enter password"
             />
-            <p>
-              Already have an account? <Link to="/login">Log-In</Link>
+            <p className="text-[0.9rem]">
+              Already have an account? <Link to="/login" className="text-blue-700">Log-In</Link>
             </p>
           </div>
           <div>
