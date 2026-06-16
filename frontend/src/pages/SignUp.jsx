@@ -31,7 +31,7 @@ const SignUp = () => {
             </p>
           </div>
           <div>
-            <Link>
+            <Link to='/pricing'>
               <div className="flex items-center gap-2">
                 <span className="text-black text-[1rem] font-[poppins] py-3 px-6 rounded-full bg-[#F1EEEA] hover:bg-[#E56E3A] hover:text-white hover:scale-110 duration-100 ease-in">Submit</span>
               </div>

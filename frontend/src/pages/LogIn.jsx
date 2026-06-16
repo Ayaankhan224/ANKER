@@ -12,7 +12,7 @@ const LogIn = () => {
         <div className="w-[60%] h-full rounded-r-3xl p-15 flex flex-col justify-between">
           <Back />
           <div className="flex flex-col gap-1">
-            <h3 className="text-2xl font-[poppins]">Sign-Up to</h3>
+            <h3 className="text-2xl font-[poppins]">Log-In to</h3>
             <h1 className="text-9xl font-[oran]">ANKER</h1>
           </div>
           <div className="flex flex-col gap-4">
@@ -27,14 +27,14 @@ const LogIn = () => {
               placeholder="Enter password"
             />
             <p className="text-[0.9rem]">
-              Already have an account?{" "}
-              <Link to="/login" className="text-blue-700">
-                Log-In
+              Want to create an account?{" "}
+              <Link to="/signup" className="text-blue-700">
+                Sign-Up
               </Link>
             </p>
           </div>
           <div>
-            <Link>
+            <Link to='/pricing'>
               <div className="flex items-center gap-2">
                 <span className="text-black text-[1rem] font-[poppins] py-3 px-6 rounded-full bg-[#F1EEEA] hover:bg-[#E56E3A] hover:text-white hover:scale-110 duration-100 ease-in">
                   Submit

@@ -5,6 +5,7 @@ import Form from './pages/Form'
 import { Routes, Route } from "react-router-dom"
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
+import Pricing from './pages/Pricing'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path='/form' element={<Form />}/>
           <Route path='/login' element={<LogIn />}/>
           <Route path='/signup' element={<SignUp />}/>
+          <Route path='/pricing' element={<Pricing />}/>
         </Routes>
       </Loading>
     </div>
