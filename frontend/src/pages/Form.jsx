@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import FormInfo from "../components/Form/FormInfo";
+import FormContent from "../components/Form/FormContent";
 
 const Form = () => {
   return (
-    <div>
-      FORM
+    <div className="h-screen w-screen flex">
+      <FormInfo />
+      <FormContent />
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

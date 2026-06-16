@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import HeroText from '../components/HeroText'
-import HeroBottom from '../components/HeroBottom'
+import Navbar from '../components/Hero/Navbar'
+import HeroText from '../components/Hero/HeroText'
+import HeroBottom from '../components/Hero/HeroBottom'
 
 const Hero = () => {
   return (
