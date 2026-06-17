@@ -1,4 +1,6 @@
-exports.rankCandidates = (candidates) => {
+exports.rankCandidates = (candidates, options = {}) => {
+  const { experience, limit } = options;
+  const targetLimit = limit ? parseInt(limit, 10) : 100;
   const ranked = candidates.map((candidate) => {
     let score = 0;
 
@@ -46,15 +48,26 @@ exports.rankCandidates = (candidates) => {
 
     const yoe = profile.years_of_experience || 0;
 
+    let yoeScore = 0;
     if (yoe >= 5 && yoe <= 9) {
-      score += 120;
+      yoeScore = 120;
     } else if (yoe > 9 && yoe <= 12) {
-      score += 80;
+      yoeScore = 80;
     } else if (yoe > 12) {
-      score += 20;
+      yoeScore = 20;
     } else if (yoe >= 3) {
-      score += 40;
+      yoeScore = 40;
     }
+
+    if (experience === "0-2 Years" && yoe <= 2) {
+      yoeScore += 250;
+    } else if (experience === "2-5 Years" && yoe >= 2 && yoe <= 5) {
+      yoeScore += 250;
+    } else if (experience === "5+ Years" && yoe >= 5) {
+      yoeScore += 250;
+    }
+
+    score += yoeScore;
 
     if (title.includes("search")) score += 80;
 
@@ -163,5 +176,5 @@ exports.rankCandidates = (candidates) => {
 
   ranked.sort((a, b) => b.score - a.score);
 
-  return ranked.slice(0, 100);
+  return ranked.slice(0, targetLimit);
 };
