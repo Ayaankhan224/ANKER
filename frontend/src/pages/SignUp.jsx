@@ -1,6 +1,6 @@
 import React from "react";
 import Back from "../components/common/Back"
-import { Link } from "react-router-dom"
+import { TransitionLink } from "./Loading"
 
 const SignUp = () => {
   return (
@@ -27,15 +27,15 @@ const SignUp = () => {
               placeholder="Enter password"
             />
             <p className="text-[0.9rem]">
-              Already have an account? <Link to="/login" className="text-blue-700">Log-In</Link>
+              Already have an account? <TransitionLink to="/login" className="text-blue-700">Log-In</TransitionLink>
             </p>
           </div>
           <div>
-            <Link to='/pricing'>
+            <TransitionLink to='/pricing'>
               <div className="flex items-center gap-2">
                 <span className="text-black text-[1rem] font-[poppins] py-3 px-6 rounded-full bg-[#F1EEEA] hover:bg-[#E56E3A] hover:text-white hover:scale-110 duration-100 ease-in">Submit</span>
               </div>
-            </Link>
+            </TransitionLink>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import gsap from "gsap";
-import { Link } from "react-router-dom";
+import { TransitionLink } from "../../pages/Loading";
 
 const HeroBottom = () => {
   const fillRef = useRef(null);
@@ -25,7 +25,7 @@ const HeroBottom = () => {
   return (
     <div className="flex-1 font-[poppins] flex justify-between items-end">
       <h6>CREATED BY</h6>
-      <Link to="/form">
+      <TransitionLink to="/form">
         <button
           onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
@@ -37,7 +37,7 @@ const HeroBottom = () => {
             className="absolute inset-0 bg-[#E67A3C] origin-bottom scale-y-0"
           />
         </button>
-      </Link>
+      </TransitionLink>
       <h6>99 LITTLE BUGS</h6>
     </div>
   );
