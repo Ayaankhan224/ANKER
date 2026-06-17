@@ -4,7 +4,7 @@ import FormContent from "../components/Form/FormContent";
 
 const Form = () => {
   return (
-    <div className="h-screen w-screen flex">
+    <div className="min-h-screen w-screen flex justify-center items-center">
       <FormInfo />
       <FormContent />
     </div>
