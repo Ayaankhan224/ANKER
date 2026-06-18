@@ -25,19 +25,27 @@ const HeroBottom = () => {
   return (
     <div className="flex-1 font-[poppins] flex justify-between items-end">
       <h6>CREATED BY</h6>
-      <TransitionLink to="/form">
-        <button
-          onMouseEnter={handleEnter}
-          onMouseLeave={handleLeave}
-          className="relative overflow-hidden bg-[#111] text-white px-6 py-3 mb-50 rounded-4xl cursor-pointer hover:scale-105 duration-100 ease-in"
-        >
-          <span className="relative z-10">GET STARTED</span>
-          <div
-            ref={fillRef}
-            className="absolute inset-0 bg-[#E67A3C] origin-bottom scale-y-0"
-          />
-        </button>
-      </TransitionLink>
+      <div className="flex gap-4">
+        <TransitionLink to="/contact">
+          <button className="border border-[#111] bg-transparent text-[#111] px-6 py-3 mb-50 rounded-4xl cursor-pointer hover:scale-105 duration-100 ease-in">
+            CONTACT US
+          </button>
+        </TransitionLink>
+        <TransitionLink to="/form">
+          <button
+            onMouseEnter={handleEnter}
+            onMouseLeave={handleLeave}
+            className="relative overflow-hidden bg-[#111] text-white px-6 py-3 mb-50 rounded-4xl cursor-pointer hover:scale-105 duration-100 ease-in"
+          >
+            <span className="relative z-10">GET STARTED</span>
+            <div
+              ref={fillRef}
+              className="absolute inset-0 bg-[#E67A3C] origin-bottom scale-y-0"
+            />
+          </button>
+        </TransitionLink>
+      </div>
+
       <h6>99 LITTLE BUGS</h6>
     </div>
   );

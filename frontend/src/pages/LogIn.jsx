@@ -19,7 +19,7 @@ const LogIn = () => {
             <input
               className="bg-[#F1EEEA] rounded-full text-[1rem] p-3 outline-none "
               type="text"
-              placeholder="Enter email"
+              placeholder="Enter username"
             />
             <input
               className="bg-[#F1EEEA] rounded-full text-[1rem] p-3 outline-none "

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
   const handlePayment = async (amount) => {
@@ -44,7 +45,7 @@ const Pricing = () => {
     <div className="h-screen w-screen flex items-center justify-evenly capitalize">
       <div className="bg-white w-[30%] h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)]">
         <div className="h-[50%] w-full rounded-4xl  shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3">
-          <div className="h-[60%] w-full rounded-4xl bg-[#b7adad] p-6 flex flex-col justify-between">
+          <div className="h-[60%] w-full rounded-4xl bg-[#CEC5C3] p-6 flex flex-col justify-between">
             <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl">
               FREE
             </h3>
@@ -71,7 +72,7 @@ const Pricing = () => {
       </div>
       <div className="bg-white w-[30%] h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)]">
         <div className="h-[50%] w-full rounded-4xl  shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3">
-          <div className="h-[60%] w-full rounded-4xl bg-[#adb7b7] p-6 flex flex-col justify-between">
+          <div className="h-[60%] w-full rounded-4xl bg-[#B8C3C1] p-6 flex flex-col justify-between">
             <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl">
               PREMIUM
             </h3>
@@ -99,21 +100,21 @@ const Pricing = () => {
       </div>
       <div className="bg-white w-[30%] h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)]">
         <div className="h-[50%] w-full rounded-4xl  shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3">
-          <div className="h-[60%] w-full rounded-4xl bg-[#b7adb6] p-6 flex flex-col justify-between">
+          <div className="h-[60%] w-full rounded-4xl bg-[#BDA79A] p-6 flex flex-col justify-between">
             <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl">
               ENTERPRISE
             </h3>
             <h1 className="text-2xl font-[poppins]">
-              <span className="text-6xl">$99</span>/month
+              <span className="text-6xl">Contact</span>&nbsp;&nbsp; Sales
             </h1>
           </div>
           <div className="h-[40%] w-full flex-col flex justify-between">
             <h6 className="font-[poppins] p-3 font-light">
               For Large organizations
             </h6>
-            <div onClick={() => handlePayment(99)} className="h-[40%] w-full bg-black rounded-4xl text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] ">
-              Proceed to Payment
-            </div>
+            <Link to='/contact' className="h-[40%] w-full bg-black rounded-4xl text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] ">
+              Contact
+            </Link>
           </div>
         </div>
         <div className="h-[50%] w-full rounded-b-4xl py-12 px-6">
