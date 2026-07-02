@@ -27,30 +27,6 @@ const creators = [
       { platform: "Instagram", url: "https://www.instagram.com/cholabhaturawithpyaaz?igsh=MWdlbjhnNTZndmJlZw==", icon: "Instagram" },
       { platform: "GitHub", url: "https://github.com/whiteee1819", icon: "Github" }
     ]
-  },
-  {
-    id: 3,
-    name: "Shrestha S Gupta",
-    role: "Full-Stack Engineer",
-    bio: "I'm passionate about AI, Data Science, and technology, and I enjoy working on innovative projects and learning new skills",
-    image: "/creator-s.jpeg",
-    socials: [
-      { platform: "LinkedIn", url: "https://www.linkedin.com/in/shrestha-s-gupta-9403a2286", icon: "Linkedin" },
-      { platform: "Instagram", url: "https://www.instagram.com/shrestha_s_gupta?igsh=N3M1Mzg4OHU3cHg5", icon: "Instagram" },
-      { platform: "GitHub", url: "https://github.com/guptaaashrestha-jpg", icon: "Github" }
-    ]
-  },
-  {
-    id: 4,
-    name: "Avi Saxena",
-    role: "Full-Stack Engineer",
-    bio: "Passionate about leveraging artificial intelligence and machine learning to build intelligent solutions. Equipped with a strong foundation in core Python development and a solid understanding of HTML for web interfaces",
-    image: "/creator-av.jpeg",
-    socials: [
-      { platform: "LinkedIn", url: "https://www.linkedin.com/in/avi-saxena-a165b4388/", icon: "Linkedin" },
-      { platform: "Instagram", url: "https://www.instagram.com/armansaxena_official/", icon: "Instagram" },
-      { platform: "GitHub", url: "https://github.com/avisaxena-stack123", icon: "Github" }
-    ]
   }
 ];
 
