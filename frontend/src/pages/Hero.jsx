@@ -7,7 +7,7 @@ import Creators from './Creators'
 const Hero = () => {
   return (
     <>
-    <div className='h-screen w-screen p-6 flex flex-col min-h-screen relative'>
+    <div className='min-h-screen w-full p-6 flex flex-col relative overflow-x-hidden'>
       <Navbar />
       <HeroText />
       <HeroBottom />

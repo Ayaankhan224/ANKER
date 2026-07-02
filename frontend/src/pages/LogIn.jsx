@@ -64,16 +64,16 @@ const LogIn = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center font-[poppins]">
-      <div className="bg-white h-180 w-340 rounded-3xl shadow-[0_10px_60px_rgba(0,0,0,0.4)] p-2 flex">
-        <div className="w-[40%] h-full rounded-l-3xl overflow-hidden">
+    <div className="min-h-screen w-full flex justify-center items-center font-[poppins] p-4 sm:p-6">
+      <div className="bg-white w-full max-w-md md:max-w-4xl min-h-[550px] md:h-[600px] rounded-3xl shadow-[0_10px_60px_rgba(0,0,0,0.4)] p-2 flex flex-col md:flex-row overflow-hidden">
+        <div className="hidden md:block md:w-[40%] h-full rounded-l-2xl overflow-hidden">
           <img src="/log-img.png" className="object-cover h-full w-full" />
         </div>
-        <div className="w-[60%] h-full rounded-r-3xl p-15 flex flex-col justify-between">
+        <div className="w-full md:w-[60%] h-full rounded-r-2xl p-6 sm:p-10 md:p-15 flex flex-col justify-between gap-8 md:gap-4">
           <Back />
           <div className="flex flex-col gap-1">
-            <h3 className="text-2xl font-[poppins]">Log-In to</h3>
-            <h1 className="text-9xl font-[oran]">ANKER</h1>
+            <h3 className="text-xl sm:text-2xl font-[poppins] text-neutral-600">Log-In to</h3>
+            <h1 className="text-6xl sm:text-8xl md:text-9xl font-[oran] leading-none">ANKER</h1>
           </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -89,7 +89,7 @@ const LogIn = () => {
             )}
 
             <input
-              className="bg-[#F1EEEA] rounded-full text-[1rem] p-3 px-5 outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all"
+              className="bg-[#F1EEEA] rounded-full text-[1rem] p-3.5 px-5 outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all"
               type="text"
               placeholder="Enter username"
               value={username}
@@ -97,16 +97,16 @@ const LogIn = () => {
               disabled={loading}
             />
             <input
-              className="bg-[#F1EEEA] rounded-full text-[1rem] p-3 px-5 outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all"
+              className="bg-[#F1EEEA] rounded-full text-[1rem] p-3.5 px-5 outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all"
               type="password"
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               disabled={loading}
             />
-            <p className="text-[0.9rem] px-2">
+            <p className="text-[0.9rem] px-2 text-neutral-600">
               Want to create an account?{" "}
-              <TransitionLink to="/signup" className="text-blue-700 hover:underline">
+              <TransitionLink to="/signup" className="text-blue-700 hover:underline font-medium">
                 Sign-Up
               </TransitionLink>
             </p>
@@ -115,7 +115,7 @@ const LogIn = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="text-black text-[1rem] font-[poppins] py-3 px-8 rounded-full bg-[#F1EEEA] hover:bg-[#E56E3A] hover:text-white hover:scale-105 duration-150 ease-in-out cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full sm:w-auto text-black text-[1rem] font-[poppins] py-3.5 px-8 rounded-full bg-[#F1EEEA] hover:bg-[#E56E3A] hover:text-white hover:scale-105 duration-150 ease-in-out cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
               >
                 {loading ? "Logging In..." : "Submit"}
               </button>

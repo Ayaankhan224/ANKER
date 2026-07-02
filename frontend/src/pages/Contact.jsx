@@ -58,68 +58,78 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen w-screen">
+    <div className="min-h-screen w-full flex flex-col font-[poppins] bg-[#F9F2E0]">
       <Info />
-      <div className="w-full h-[65%] flex ">
-        <div className="w-[60%] h-[50%] p-8 grid grid-cols-2 gap-7">
-          <label className="font-semibold text-[1.2rem] -mb-3.75">Name</label>
-          <label className="font-semibold text-[1.2rem] -mb-3.75">Email</label>
-          <input
-            className="bg-neutral-200 p-3 rounded-4xl mb-3.75 outline-none"
-            type="text"
-            placeholder="Your full name "
-          />
-          <input
-            className="bg-neutral-200 p-3 rounded-4xl mb-3.75 outline-none"
-            type="text"
-            placeholder="you@example.com"
-          />
-          <label className="font-semibold text-[1.2rem] -mb-3.75">
-            Phone Number
-          </label>
-          <label className="font-semibold text-[1.2rem] -mb-3.75">
-            Preferred Date
-          </label>
-          <input
-            className="bg-neutral-200 p-3 rounded-4xl mb-3.75 outline-none"
-            type="text"
-            placeholder="+91 8281978161"
-          />
-          <input
-            className="bg-neutral-200 p-3 rounded-4xl mb-3.75 outline-none"
-            type="text"
-            placeholder="dd/mm/yyyy"
-          />
-          <label className="font-semibold text-[1.2rem] -mb-3.75">
-            How to contact you?
-          </label>
-          <select
-            className="font-semibold text-[1.2rem] bg-neutral-200 p-3 rounded-4xl outline-none"
-            name="contact"
-          >
-            <option>Email</option>
-            <option>Call</option>
-          </select>
-          <div
-            onMouseEnter={handleEnter}
-            onMouseLeave={handleLeave}
-            onClick={handleClick}
-            className="rounded-4xl flex items-center gap-7 bg-black text-white w-fit py-3 px-5 cursor-pointer mt-17 text-3xl font-[poppins]"
-          >
-            <div className="btnText">
-              {"Submit".split("").map((char, i) => (
-                <span key={i} className="letter inline-block">
-                  {char}
-                </span>
-              ))}
-            </div>
-            <div className="btn bg-white h-3.75 w-3.75 rounded-full overflow-hidden flex justify-center items-center">
-              <GoArrowDownLeft />
+      <div className="w-full flex flex-col md:flex-row flex-grow">
+        <form onSubmit={(e) => e.preventDefault()} className="w-full md:w-[60%] p-6 sm:p-10 md:p-12 lg:p-16 grid grid-cols-1 sm:grid-cols-2 gap-6 items-start self-center">
+          <div className="flex flex-col gap-1.5">
+            <label className="font-semibold text-sm sm:text-base text-neutral-800 uppercase tracking-wider">Name</label>
+            <input
+              className="bg-neutral-200/80 p-3.5 px-5 rounded-full outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all text-sm sm:text-base"
+              type="text"
+              placeholder="Your full name"
+            />
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <label className="font-semibold text-sm sm:text-base text-neutral-800 uppercase tracking-wider">Email</label>
+            <input
+              className="bg-neutral-200/80 p-3.5 px-5 rounded-full outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all text-sm sm:text-base"
+              type="text"
+              placeholder="you@example.com"
+            />
+          </div>
+          
+          <div className="flex flex-col gap-1.5">
+            <label className="font-semibold text-sm sm:text-base text-neutral-800 uppercase tracking-wider">Phone Number</label>
+            <input
+              className="bg-neutral-200/80 p-3.5 px-5 rounded-full outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all text-sm sm:text-base"
+              type="text"
+              placeholder="+91 8281978161"
+            />
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <label className="font-semibold text-sm sm:text-base text-neutral-800 uppercase tracking-wider">Preferred Date</label>
+            <input
+              className="bg-neutral-200/80 p-3.5 px-5 rounded-full outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all text-sm sm:text-base"
+              type="text"
+              placeholder="dd/mm/yyyy"
+            />
+          </div>
+          
+          <div className="flex flex-col gap-1.5 sm:col-span-2">
+            <label className="font-semibold text-sm sm:text-base text-neutral-800 uppercase tracking-wider">How to contact you?</label>
+            <select
+              className="font-semibold bg-neutral-200/80 p-3.5 px-5 rounded-full outline-none focus:ring-2 focus:ring-[#E56E3A] transition-all text-sm sm:text-base"
+              name="contact"
+            >
+              <option>Email</option>
+              <option>Call</option>
+            </select>
+          </div>
+          
+          <div className="sm:col-span-2 mt-4">
+            <div
+              onMouseEnter={handleEnter}
+              onMouseLeave={handleLeave}
+              onClick={handleClick}
+              className="rounded-full flex items-center gap-7 bg-black text-white w-fit py-3.5 px-6 cursor-pointer text-xl sm:text-2xl font-[poppins] hover:scale-102 duration-150 transition-transform"
+            >
+              <div className="btnText">
+                {"Submit".split("").map((char, i) => (
+                  <span key={i} className="letter inline-block">
+                    {char}
+                  </span>
+                ))}
+              </div>
+              <div className="btn bg-white h-4 w-4 rounded-full overflow-hidden flex justify-center items-center">
+                <GoArrowDownLeft className="text-black text-xs" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="w-[40%] h-full p-15 flex justify-center items-center">
-          <div className="h-full w-full bg-[url(/contact-img.jpg)] bg-cover rounded-4xl"></div>
+        </form>
+        
+        <div className="w-full md:w-[40%] p-6 sm:p-10 md:p-12 lg:p-16 flex justify-center items-center shrink-0 min-h-[300px] md:min-h-0">
+          <div className="h-[250px] md:h-full w-full bg-[url(/contact-img.jpg)] bg-cover bg-center rounded-3xl shadow-lg border border-neutral-900/10"></div>
         </div>
       </div>
     </div>

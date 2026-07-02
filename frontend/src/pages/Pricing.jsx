@@ -83,31 +83,31 @@ const Pricing = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-evenly capitalize font-[poppins]">
-      <div className="bg-white w-[30%] h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)]">
-        <div className="h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3">
+    <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center gap-8 py-16 px-6 sm:px-12 lg:px-6 capitalize font-[poppins] overflow-y-auto">
+      <div className="bg-white w-full max-w-sm lg:w-[30%] min-h-[520px] lg:h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
+        <div className="h-[260px] lg:h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
           <div className="h-[60%] w-full rounded-4xl bg-[#CEC5C3] p-6 flex flex-col justify-between">
-            <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl">
+            <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl text-sm font-semibold">
               FREE
             </h3>
-            <h1 className="text-2xl font-[poppins]">
-              <span className="text-6xl">$0</span>/month
+            <h1 className="text-xl sm:text-2xl font-[poppins]">
+              <span className="text-5xl sm:text-6xl">$0</span>/month
             </h1>
           </div>
-          <div className="h-[40%] w-full flex-col flex justify-between">
-            <h6 className="font-[poppins] p-3 font-light">
+          <div className="h-[40%] w-full flex-col flex justify-between pt-2">
+            <h6 className="font-[poppins] px-3 font-light text-sm text-neutral-500">
               Perfect For Small teams
             </h6>
             <button 
               onClick={() => selectPlan("free")} 
-              className="h-[40%] w-full bg-black rounded-4xl text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A]"
+              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
             >
               Choose Free Plan
             </button>
           </div>
         </div>
-        <div className="h-[50%] w-full rounded-b-4xl py-12 px-6">
-          <ul className="flex flex-col h-full w-full font-[poppins] font-medium gap-3">
+        <div className="h-[260px] lg:h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
+          <ul className="flex flex-col w-full font-[poppins] font-medium gap-3 text-neutral-700">
             <li>50 resume limit</li>
             <li>Basic candidate ranking</li>
             <li>Top 5 candidates shown</li>
@@ -115,30 +115,30 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="bg-white w-[30%] h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)]">
-        <div className="h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3">
+      <div className="bg-white w-full max-w-sm lg:w-[30%] min-h-[520px] lg:h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
+        <div className="h-[260px] lg:h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
           <div className="h-[60%] w-full rounded-4xl bg-[#B8C3C1] p-6 flex flex-col justify-between">
-            <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl">
+            <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl text-sm font-semibold">
               PREMIUM
             </h3>
-            <h1 className="text-2xl font-[poppins]">
-              <span className="text-6xl">$39</span>/month
+            <h1 className="text-xl sm:text-2xl font-[poppins]">
+              <span className="text-5xl sm:text-6xl">$39</span>/month
             </h1>
           </div>
-          <div className="h-[40%] w-full flex-col flex justify-between">
-            <h6 className="font-[poppins] p-3 font-light">
+          <div className="h-[40%] w-full flex-col flex justify-between pt-2">
+            <h6 className="font-[poppins] px-3 font-light text-sm text-neutral-500">
               Perfect For Growing teams
             </h6>
             <button 
               onClick={() => handlePayment(39)} 
-              className="h-[40%] w-full bg-black rounded-4xl text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A]"
+              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
             >
               Proceed to Payment
             </button>
           </div>
         </div>
-        <div className="h-[50%] w-full rounded-b-4xl py-12 px-6">
-          <ul className="flex flex-col h-full w-full font-[poppins] font-medium gap-3">
+        <div className="h-[260px] lg:h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
+          <ul className="flex flex-col w-full font-[poppins] font-medium gap-3 text-neutral-700">
             <li>No resume limit</li>
             <li>Deep candidate ranking</li>
             <li>Export reports</li>
@@ -146,30 +146,30 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="bg-white w-[30%] h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)]">
-        <div className="h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3">
+      <div className="bg-white w-full max-w-sm lg:w-[30%] min-h-[520px] lg:h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
+        <div className="h-[260px] lg:h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
           <div className="h-[60%] w-full rounded-4xl bg-[#BDA79A] p-6 flex flex-col justify-between">
-            <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl">
+            <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl text-sm font-semibold">
               ENTERPRISE
             </h3>
-            <h1 className="text-2xl font-[poppins]">
-              <span className="text-6xl">Contact</span>&nbsp;&nbsp; Sales
+            <h1 className="text-xl sm:text-2xl font-[poppins]">
+              <span className="text-3xl sm:text-4xl">Contact Sales</span>
             </h1>
           </div>
-          <div className="h-[40%] w-full flex-col flex justify-between">
-            <h6 className="font-[poppins] p-3 font-light">
+          <div className="h-[40%] w-full flex-col flex justify-between pt-2">
+            <h6 className="font-[poppins] px-3 font-light text-sm text-neutral-500">
               For Large organizations
             </h6>
             <TransitionLink 
               to="/contact" 
-              className="h-[40%] w-full bg-black rounded-4xl text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A]"
+              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
             >
               Contact
             </TransitionLink>
           </div>
         </div>
-        <div className="h-[50%] w-full rounded-b-4xl py-12 px-6">
-          <ul className="flex flex-col h-full w-full font-[poppins] font-medium gap-3">
+        <div className="h-[260px] lg:h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
+          <ul className="flex flex-col w-full font-[poppins] font-medium gap-3 text-neutral-700">
             <li>Everything in premium</li>
             <li>Shared analysis</li>
             <li>API</li>

@@ -150,7 +150,7 @@ const FormContent = () => {
   };
 
   return (
-    <div className="w-full max-w-[650px] flex flex-col gap-6 py-10 font-[poppins]">
+    <div className="w-full max-w-[650px] flex flex-col gap-6 py-6 lg:py-10 font-[poppins] px-2 sm:px-4 lg:px-0">
       <div className={`p-4 rounded-3xl border flex justify-between items-center text-sm font-medium ${
         currentPlan === "free" 
           ? "bg-amber-50/50 border-amber-200 text-amber-800" 
