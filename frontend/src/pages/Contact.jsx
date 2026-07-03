@@ -11,8 +11,13 @@ const Contact = () => {
       x: 60,
       scale: 4,
       duration: 0.8,
-      backgroundColor: "#111",
+      backgroundColor: "#fff",
       rotate: 180,
+      ease: "power3.out",
+    });
+    gsap.to(".arrow", {
+      color: "#000",
+      duration: 0.8,
       ease: "power3.out",
     });
   };
@@ -22,8 +27,13 @@ const Contact = () => {
       x: 0,
       scale: 1,
       duration: 0.8,
-      backgroundColor: "#fff",
+      backgroundColor: "transparent",
       rotate: -180,
+      ease: "power3.out",
+    });
+    gsap.to(".arrow", {
+      color: "#fff",
+      duration: 0.8,
       ease: "power3.out",
     });
   };
@@ -31,8 +41,9 @@ const Contact = () => {
   const handleClick = () => {
     gsap.timeline({
       repeat: 5,
-      onComplete: () =>{
-        gsap.to
+      onComplete: () => {
+        const btnText = document.querySelector(".btnText");
+        if (btnText) btnText.textContent = "Done";
       }
     })
     .to(".letter", {
@@ -121,8 +132,8 @@ const Contact = () => {
                   </span>
                 ))}
               </div>
-              <div className="btn bg-white h-4 w-4 rounded-full overflow-hidden flex justify-center items-center">
-                <GoArrowDownLeft className="text-black text-xs" />
+              <div className="btn bg-transparent h-4 w-4 rounded-full overflow-hidden flex justify-center items-center">
+                <GoArrowDownLeft className="arrow text-white text-xs" />
               </div>
             </div>
           </div>

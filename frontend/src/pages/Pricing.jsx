@@ -2,6 +2,8 @@ import React from "react";
 import { TransitionLink, useTransition } from "./Loading";
 import { useAuth } from "../context/AuthContext";
 
+const API_URL = import.meta.env.VITE_API_URL || "https://anker-9k4b.onrender.com";
+
 const Pricing = () => {
   const { user, updateLocalPlan } = useAuth();
   const { transitionTo } = useTransition();
@@ -14,7 +16,7 @@ const Pricing = () => {
     }
 
     try {
-      const response = await fetch("https://anker-9k4b.onrender.com/api/auth/plan", {
+      const response = await fetch(`${API_URL}/api/auth/plan`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +50,7 @@ const Pricing = () => {
     }
 
     try {
-      const response = await fetch("https://anker-9k4b.onrender.com/create-order", {
+      const response = await fetch(`${API_URL}/create-order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,9 +85,9 @@ const Pricing = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center gap-8 py-16 px-6 sm:px-12 lg:px-6 capitalize font-[poppins] overflow-y-auto">
-      <div className="bg-white w-full max-w-sm lg:w-[30%] min-h-[520px] lg:h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
-        <div className="h-[260px] lg:h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
+    <div className="min-h-screen w-full flex flex-col lg:flex-row lg:flex-wrap items-center justify-center gap-8 py-16 px-6 sm:px-12 lg:px-6 capitalize font-[poppins] overflow-y-auto">
+      <div className="bg-white w-full max-w-sm h-[520px] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
+        <div className="h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
           <div className="h-[60%] w-full rounded-4xl bg-[#CEC5C3] p-6 flex flex-col justify-between">
             <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl text-sm font-semibold">
               FREE
@@ -100,13 +102,13 @@ const Pricing = () => {
             </h6>
             <button 
               onClick={() => selectPlan("free")} 
-              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
+              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-105 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
             >
               Choose Free Plan
             </button>
           </div>
         </div>
-        <div className="h-[260px] lg:h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
+        <div className="h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
           <ul className="flex flex-col w-full font-[poppins] font-medium gap-3 text-neutral-700">
             <li>50 resume limit</li>
             <li>Basic candidate ranking</li>
@@ -115,8 +117,8 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="bg-white w-full max-w-sm lg:w-[30%] min-h-[520px] lg:h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
-        <div className="h-[260px] lg:h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
+      <div className="bg-white w-full max-w-sm h-[520px] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
+        <div className="h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
           <div className="h-[60%] w-full rounded-4xl bg-[#B8C3C1] p-6 flex flex-col justify-between">
             <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl text-sm font-semibold">
               PREMIUM
@@ -131,13 +133,13 @@ const Pricing = () => {
             </h6>
             <button 
               onClick={() => handlePayment(39)} 
-              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
+              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-105 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
             >
               Proceed to Payment
             </button>
           </div>
         </div>
-        <div className="h-[260px] lg:h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
+        <div className="h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
           <ul className="flex flex-col w-full font-[poppins] font-medium gap-3 text-neutral-700">
             <li>No resume limit</li>
             <li>Deep candidate ranking</li>
@@ -146,8 +148,8 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="bg-white w-full max-w-sm lg:w-[30%] min-h-[520px] lg:h-[90%] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
-        <div className="h-[260px] lg:h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
+      <div className="bg-white w-full max-w-sm h-[520px] rounded-4xl flex flex-col justify-between items-center shadow-[0_12px_25px_rgba(0,0,0,0.25)] shrink-0">
+        <div className="h-[50%] w-full rounded-4xl shadow-[0_12px_25px_rgba(0,0,0,0.25)] z-10 p-3 flex-shrink-0">
           <div className="h-[60%] w-full rounded-4xl bg-[#BDA79A] p-6 flex flex-col justify-between">
             <h3 className="font-[poppins] bg-white w-fit px-3 py-1 rounded-4xl text-sm font-semibold">
               ENTERPRISE
@@ -162,13 +164,13 @@ const Pricing = () => {
             </h6>
             <TransitionLink 
               to="/contact" 
-              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-101 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
+              className="h-[40%] w-full bg-black rounded-full text-white flex justify-center items-center hover:scale-105 cursor-pointer duration-300 ease-out hover:bg-[#E56E3A] font-semibold text-sm"
             >
               Contact
             </TransitionLink>
           </div>
         </div>
-        <div className="h-[260px] lg:h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
+        <div className="h-[50%] w-full rounded-b-4xl py-8 px-8 flex items-center">
           <ul className="flex flex-col w-full font-[poppins] font-medium gap-3 text-neutral-700">
             <li>Everything in premium</li>
             <li>Shared analysis</li>

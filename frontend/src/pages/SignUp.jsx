@@ -3,6 +3,8 @@ import Back from "../components/common/Back";
 import { TransitionLink, useTransition } from "./Loading";
 import { useAuth } from "../context/AuthContext";
 
+const API_URL = import.meta.env.VITE_API_URL || "https://anker-9k4b.onrender.com";
+
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -38,7 +40,7 @@ const SignUp = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://anker-9k4b.onrender.com/api/auth/signup", {
+      const response = await fetch(`${API_URL}/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +57,7 @@ const SignUp = () => {
         throw new Error(data.message || "Registration failed");
       }
 
-      login({ token: data.token, username: data.username });
+      login({ token: data.token, username: data.username, plan: data.plan });
 
       setSuccess("Account created successfully! Redirecting to pricing...");
       setUsername("");
